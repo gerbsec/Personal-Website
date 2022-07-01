@@ -63,7 +63,7 @@ section {
 }
 
 section > h2, section > h5 {
-    text-aligh: center;
+    text-align: center;
     color: var(--color-light);
 }
 
