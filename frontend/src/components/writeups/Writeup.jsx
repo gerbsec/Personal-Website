@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import apiclient from '../../utils/apiclient';
+import './writeup.css';
 
 function Writeup() {
     const { title } = useParams();
@@ -14,15 +15,10 @@ function Writeup() {
         fetchData();
     }, []);
 
-    useEffect(() => {
-
-    }, []);
     return (
-        <div>
-            <ReactMarkdown
-                children={post}
-            />
-        </div>
+        <div className='center' dangerouslySetInnerHTML={{__html:post}}/>
+
+        // <div>{post}</div>
     );
 }
 

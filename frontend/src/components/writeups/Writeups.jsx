@@ -24,7 +24,7 @@ export const Writeups = ({ limit }) => {
             <h5>Recent work</h5>
             <h2>Writeups</h2>
 
-            <div className='middle'>
+            <div className='center'>
                 <Link to="/writeups" className='btn'>View All</Link>
             </div>
 
