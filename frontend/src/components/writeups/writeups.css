@@ -4,6 +4,13 @@
     gap: 2.5rem
 }
 
+.middle {
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
 .portfolio__item {
     background: var(--color-bg-variant);
     padding: 1.3rem;

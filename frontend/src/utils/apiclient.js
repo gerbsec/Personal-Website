@@ -12,7 +12,8 @@ async function get_all() {
 }
 
 async function get_one(title) {
-    return (await axios.get(`${base_url}/writeup/${title}`)).data;
+    return (await axios.get(`${base_url}/writeup/${title}/contents`)).data;
 }
+
 
 export default { get_recent, get_all, get_one }

@@ -23,7 +23,10 @@ export const Writeups = ({ limit }) => {
         <section id='writeups'>
             <h5>Recent work</h5>
             <h2>Writeups</h2>
-            {/* <Link to="/writeups" className='btn btn-primary'>Check it</Link> */}
+
+            <div className='middle'>
+                <Link to="/writeups" className='btn'>View All</Link>
+            </div>
 
             <div className="container portfolio__container">
                 {
