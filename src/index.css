@@ -11,12 +11,13 @@
 }
 
 :root {
-    --color-bg: #1f1f38;
-    --color-bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
-    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-bg: #21212b;
+    --color-bg-variant: #262633;
+    --color-primary: #b5b8be;
+    --color-primary-variant: rgba(108, 121, 131, 0.4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
+    --color-links: rgba(50, 130, 223, 0.4);
 
     --transition: all 400ms ease;
 
@@ -70,6 +71,10 @@ section > h2, section > h5 {
 section > h2 {
     color: var(--color-primary);
     margin-bottom: 3rem;
+}
+
+.link {
+    color: var(--color-links);
 }
 
 .text-light {

@@ -42,7 +42,6 @@ export const Experience = () => {
                         </article>
                         <article className='experience__details'>
                             <BsPatchCheckFill className='experience__details-icons' />
-
                             <div>
                                 <h4>Adversary Research</h4>
                                 <small className='text-light'>Experienced</small>

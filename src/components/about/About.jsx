@@ -17,7 +17,7 @@ export const About = () => {
                         <article className='about__card'>
                             <MdSecurity className='about__icon'/>
                             <h5>Security Engineer</h5>
-                            <small>Intern at <a href="https://prelude.org">Prelude</a></small>
+                            <small>Intern at <a href="https://prelude.org" className='link'>Prelude</a></small>
                         </article>
 
                         <article className='about__card'>
@@ -29,7 +29,7 @@ export const About = () => {
                         <article className='about__card'>
                             <SiHackaday className='about__icon'/>
                             <h5>Penetration Tester</h5>
-                            <small><a href="https://www.credential.net/aaf2c998-78c4-4714-add1-7185a3602a91">OSCP</a> Certified</small>
+                            <small><a href="https://www.credential.net/aaf2c998-78c4-4714-add1-7185a3602a91" className="link">OSCP</a> Certified</small>
                         </article>
 
                         <article className='about__card'>
