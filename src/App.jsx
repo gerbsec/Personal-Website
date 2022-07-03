@@ -9,16 +9,17 @@ import Header from './components/header/Header';
 import Nav from './components/nav/Nav';
 import Markdown2HTML from './components/writeups/markdown/Markdown2HTML';
 
-const homeContainer = <><Header/><Nav/><About/><Experience/><Writeups/><Contact/><Footer/></>
+const homeContainer = <><Header /><About /><Experience /><Writeups limit={6} /><Contact /><Footer /></>
 
 export const App = () => {
     return (
         <Router>
+            <Nav />
             <Routes>
                 <Route path="/" element={homeContainer} />
-                <Route path="/writeups" element={<><Writeups/></>}/>
-                <Route path="/writeups/:title" element={<><Markdown2HTML /></>}/>
-        </Routes>
+                <Route path="/writeups" element={<><Writeups /></>} />
+                <Route path="/writeups/:title" element={<><Markdown2HTML /></>} />
+            </Routes>
         </Router >
     );
 }
