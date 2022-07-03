@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './writeups.css';
-import Data from './Data';
+
+const Data = [
+    {
+        
+    }
+]
 
 
-export const Writeups = ({limit}) => {
+export const Writeups = ({ limit }) => {
     return (
         <section id='writeups'>
             <h5>Recent work</h5>

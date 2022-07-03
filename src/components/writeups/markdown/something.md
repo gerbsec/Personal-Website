@@ -1,3 +1,7 @@
+---
+image: ../../../assets/me.png
+link: https://github.com/gerbsec
+--- 
 # Challenge name: wine
 
 ## Description

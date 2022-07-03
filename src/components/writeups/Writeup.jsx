@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 
-function Markdown2HTML () {
-    const file_name = 'Timelapse.md';
+function Writeup () {
+    const {title} = useParams();
     const [post, setPost] = useState('');
 
     useEffect(() => {
-        import (`/${file_name}`)
+        import (`./markdown/${title}.md`)
             .then(res => {
                 fetch(res.default)
                     .then(res => res.text())
@@ -23,4 +24,4 @@ function Markdown2HTML () {
     );
 }
 
-export default Markdown2HTML;
+export default Writeup;

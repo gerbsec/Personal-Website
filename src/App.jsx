@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
 import Header from './components/header/Header';
 import Nav from './components/nav/Nav';
-import Markdown2HTML from './components/writeups/markdown/Markdown2HTML';
+import Writeup from './components/writeups/Writeup';
 
 const homeContainer = <><Header /><About /><Experience /><Writeups limit={6} /><Contact /><Footer /></>
 
@@ -18,7 +18,7 @@ export const App = () => {
             <Routes>
                 <Route path="/" element={homeContainer} />
                 <Route path="/writeups" element={<><Writeups /></>} />
-                <Route path="/writeups/:title" element={<><Markdown2HTML /></>} />
+                <Route path="/writeups/:title" element={<><Writeup /></>} />
             </Routes>
         </Router >
     );
