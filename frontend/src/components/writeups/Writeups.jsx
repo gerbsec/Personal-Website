@@ -27,15 +27,15 @@ export const Writeups = ({ limit }) => {
 
             <div className="container portfolio__container">
                 {
-                    data.map(({ title, image, link }) => {
+                    data.map(({ title, image }) => {
                         return (
                             <article key={title} className='portfolio__item'>
                                 <div className="portfolio__item-image">
-                                    <img src={image} alt={title} />
+                                    <img src={`data:image/png;base64,${image}`} />
                                 </div>
                                 <h3>{title}</h3>
                                 <div className="portfolio__item-cta">
-                                    <Link to={`/writeups/${title}`} className='btn btn-primary'>{title}</Link>
+                                    <Link to={`/writeups/${title}`} className='btn btn-primary'>Check it out!</Link>
                                 </div>
                             </article>
                         )

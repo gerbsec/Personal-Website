@@ -9,11 +9,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=['*'])
-# WRITEUPS_DIR="/opt/writeups"
 WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
 
 
-# @dataclass
 class WriteUp:
     title: str
     descr: str
@@ -21,9 +19,8 @@ class WriteUp:
     image: str
     __path: Path
 
-    def __init__(self, title, descr, created, img, path) -> None:
+    def __init__(self, title, created, img, path) -> None:
         self.title = title
-        self.descr = descr
         self.created_epoc = created
         self.image = img
         self.__path = path
@@ -35,7 +32,7 @@ class WriteUp:
         date_text = frontmatter.load(str(path.joinpath('README.md')))['date']
         writeup_date = float(datetime.strptime(
             date_text, '%m/%d/%Y').strftime("%s"))
-        return WriteUp(str(path.name), '', writeup_date, img, path)
+        return WriteUp(str(path.name), writeup_date, img, path)
 
     def markdown(self) -> str:
         return frontmatter.load(str(self.__path.joinpath('README.md'))).content

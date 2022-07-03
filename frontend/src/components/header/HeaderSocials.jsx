@@ -1,6 +1,6 @@
 import React from 'react'
-import {FiLinkedin, FiGithub, FiTwitter} from 'react-icons/fi';
-import {SiHackthebox} from 'react-icons/si';
+import { FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi';
+import { SiHackthebox } from 'react-icons/si';
 
 export const HeaderSocials = () => {
     return (
