@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './writeups.css';
-
-const Data = [
-    {
-        
-    }
-]
+import apiClient from "../../utils/apiclient";
 
 
 export const Writeups = ({ limit }) => {
+    const [data, setData] = useState([])
+    const fetchData = async () => {
+
+        if (limit) {
+            setData(await apiClient.get_recent(limit));
+        } else {
+            setData(await apiClient.get_all());
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     return (
         <section id='writeups'>
             <h5>Recent work</h5>
             <h2>Writeups</h2>
-            <Link to="/writeups" className='btn btn-primary'>Check it</Link>
+            {/* <Link to="/writeups" className='btn btn-primary'>Check it</Link> */}
 
             <div className="container portfolio__container">
                 {
-                    Data.slice(0, limit ?? Data.length).map(({ title, image, link }) => {
+                    data.map(({ title, image, link }) => {
                         return (
                             <article key={title} className='portfolio__item'>
                                 <div className="portfolio__item-image">

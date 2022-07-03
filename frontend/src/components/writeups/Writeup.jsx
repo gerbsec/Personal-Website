@@ -7,14 +7,8 @@ function Writeup () {
     const [post, setPost] = useState('');
 
     useEffect(() => {
-        // import (`./markdown/${title}.md`)
-        //     .then(res => {
-        //         fetch(res.default)
-        //             .then(res => res.text())
-        //             .then(res => setPost(res));
-        //     })
-        //     .catch(err => console.log(err));
-    });
+        
+    },[]);
     return (
         <div>
             <ReactMarkdown

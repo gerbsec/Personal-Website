@@ -5,8 +5,10 @@ from datetime import date, datetime
 from pathlib import Path
 import frontmatter
 import base64
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(CORSMiddleware,allow_origins=['*'])
 # WRITEUPS_DIR="/opt/writeups"
 WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
 
