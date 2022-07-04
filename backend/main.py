@@ -7,10 +7,9 @@ from pathlib import Path
 import frontmatter
 import base64
 from fastapi.middleware.cors import CORSMiddleware
-# import markdown2
 import markdown
 import re
-import json
+
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=['*'])
@@ -38,6 +37,12 @@ WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
 #         new_html = re.sub(r'src="(.*?)"', convert_links, html)
 #         return new_html
 
+
+
+some_text = '''\
+    :::python
+    print('hellow world')
+'''
 
 class WriteUp:
     title: str
@@ -77,7 +82,6 @@ class WriteUp:
                 matching_img[0].read_bytes()).decode('ascii') or None
 
         return {'html': html, 'matched': matched}
-        # return json.dumps(matched)
 
     def __repr__(self) -> str:
         return F"({self.created_epoc}) {self.title}"

@@ -10,7 +10,6 @@ import Nav from './components/nav/Nav';
 import Writeup from './components/writeups/Writeup';
 
 const homeContainer = <><Header /><About /><Experience /><Writeups limit={6} /><Contact /><Footer /></>
-
 export const App = () => {
     return (
         <Router>
