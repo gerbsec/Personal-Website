@@ -62,6 +62,9 @@
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+    --color-lightGray: #fafafa;
+    --color-medBlue: #9baecf;
+    --color-char: #292929;
 }
 
 html {

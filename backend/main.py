@@ -1,3 +1,4 @@
+from mimetypes import init
 from typing import List
 from fastapi import FastAPI
 from dataclasses import dataclass
@@ -6,10 +7,36 @@ from pathlib import Path
 import frontmatter
 import base64
 from fastapi.middleware.cors import CORSMiddleware
+# import markdown2
+import markdown
+import re
+import json
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=['*'])
+
 WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
+
+
+# class Renderer:
+
+#     def render(self, path: Path):
+#         html = markdown2.markdown(
+#             frontmatter.load(str(path.joinpath('README.md'))).content
+#         )
+
+#         def convert_links(match: re.Match):
+#             img_name = match.group(1).split('/')[-1]
+#             matching_img = [x for x in path.joinpath(
+#                 'images').iterdir() if x.name == img_name]
+#             if not matching_img:
+#                 return
+
+#             return F"src=\"data:image/png;base64,{base64.b64encode(matching_img[0].read_bytes()).decode('ascii')}"
+#                                     # <img src={`data:image/png;base64,${image}`} />
+
+#         new_html = re.sub(r'src="(.*?)"', convert_links, html)
+#         return new_html
 
 
 class WriteUp:
@@ -35,7 +62,22 @@ class WriteUp:
         return WriteUp(str(path.name), writeup_date, img, path)
 
     def markdown(self) -> str:
-        return frontmatter.load(str(self.__path.joinpath('README.md'))).content
+        html = markdown.markdown(
+            frontmatter.load(str(self.__path.joinpath('README.md'))).content,
+            extensions=['fenced_code', 'codehilite']
+        )
+
+        images = re.findall(r'src=\"(.*?)\"', html)
+        matched = {}
+        for img in images:
+            img_name = img.split('/')[-1]
+            matching_img = [x for x in self.__path.joinpath(
+                'images').iterdir() if x.name == img_name]
+            matched[img] = matching_img and base64.b64encode(
+                matching_img[0].read_bytes()).decode('ascii') or None
+
+        return {'html': html, 'matched': matched}
+        # return json.dumps(matched)
 
     def __repr__(self) -> str:
         return F"({self.created_epoc}) {self.title}"

@@ -1,4 +1,35 @@
-.center {
-    text-align: center;
-    margin: 0 0 4rem
+.writeup_page_middle {
+    text-align: left;
 }
+
+.writeup_page_middle img {
+    max-width: 50%;
+}
+
+/* For all <code> */
+/* pre {
+    background-color: #D1D1D0;
+    overflow: auto;
+    font-family: 'Monaco', monospace;
+    padding: 0 1em;
+} 
+
+
+code {
+    font-family: Monaco, monospace;
+    line-height: 100%;
+    padding: 0.2em;
+    color: black;
+    letter-spacing: -0.05em;
+    word-break: normal;
+    border-radius: 5px;
+}
+
+
+pre code {
+    border: none;
+    background: none;
+    line-height: 1em;
+    letter-spacing: normal;
+    word-break: break-all;
+} */
