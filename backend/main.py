@@ -38,12 +38,6 @@ WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
 #         return new_html
 
 
-
-some_text = '''\
-    :::python
-    print('hellow world')
-'''
-
 class WriteUp:
     title: str
     descr: str

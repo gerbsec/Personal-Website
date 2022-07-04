@@ -2,6 +2,56 @@ pre {
     line-height: 125%;
 }
 
+.writeup__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15%;
+}
+
+.writeup__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.writeup__card {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.writeup__card h1 {
+    margin: 2rem 0 2.6rem;
+    text-align: center;
+}
+
+.writeup__card h2 {
+    margin: 2rem 0 2.6rem;
+    text-align: center;
+}
+
+.writeup__card h3 {
+    margin: 2rem 0 2.6rem;
+    text-align: center;
+}
+
+.writeup__card h4 {
+    margin: 2rem 0 2.6rem;
+    text-align: center;
+}
+
+.writeup__card h5 {
+    margin: 2rem 0 2.6rem;
+    text-align: center;
+}
+
+.writeup__card p {
+    margin: 2rem 0 2.6rem;
+}
+
 
 td.linenos .normal {
     color: inherit;
@@ -36,9 +86,9 @@ span.linenos.special {
 }
 
 .codehilite {
-    width:fit-content;
+    width: fit-content;
     display: table;
-    margin:0 auto;
+    margin: 0 auto;
     font-size: 20px;
     background: #282C34;
     color: #ABB2BF
@@ -430,4 +480,16 @@ span.linenos.special {
     color: #D19A66
 }
 
-/* Literal.Number.Integer.Long */
+
+@media screen and (max-width: 1024px) {
+    .writeup_container {
+        grid-template-columns: 1fr;
+        gap: 1 rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .writeup_container {
+        width: var(--container-width-sm);
+    }
+}

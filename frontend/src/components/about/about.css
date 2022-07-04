@@ -8,7 +8,6 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
-
 }
 
 .about__card {
@@ -44,7 +43,7 @@
 
 .about__content p {
     margin: 2rem 0 2.6rem;
-    color: var(--color-lgiht);
+    color: var(--color-light);
 }
 
 @media screen and (max-width: 1024px) {

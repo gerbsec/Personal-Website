@@ -16,8 +16,8 @@ export const App = () => {
             <Nav />
             <Routes>
                 <Route path="/" element={homeContainer} />
-                <Route path="/writeups" element={<><Writeups /></>} />
-                <Route path="/writeups/:title" element={<><Writeup /></>} />
+                <Route path="/writeups" element={<><Writeups /><Contact /><Footer /></>} />
+                <Route path="/writeups/:title" element={<><Writeup /><Contact /><Footer /></>} />
             </Routes>
         </Router >
     );

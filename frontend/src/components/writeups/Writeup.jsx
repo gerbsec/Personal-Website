@@ -46,9 +46,13 @@ function Writeup() {
     }, []);
 
     return (
-        <div className='writeup_page_middle' dangerouslySetInnerHTML={{ __html: post }} />
-
-        // <div>{post}</div>
+        <div className="container writeup__container">
+            <div className="writeup__content">
+                <div className="writeup__cards">
+                        <article className="writeup__card" dangerouslySetInnerHTML={{ __html: post }} />
+                </div>
+            </div>
+        </div>
     );
 }
 
