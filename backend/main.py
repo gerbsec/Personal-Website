@@ -14,7 +14,7 @@ import re
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=['*'])
 
-WRITEUPS_DIR = Path("~/repo/writeups").expanduser()
+WRITEUPS_DIR = Path("/opt/writeups").expanduser()
 
 
 # class Renderer:
