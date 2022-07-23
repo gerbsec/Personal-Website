@@ -1,5 +1,7 @@
 pre {
     line-height: 125%;
+    display:inline-block;
+    width: 500px;
 }
 
 .writeup__container {
@@ -86,8 +88,6 @@ span.linenos.special {
 }
 
 .codehilite {
-    width: fit-content;
-    display: table;
     margin: 0 auto;
     font-size: 20px;
     background: #282C34;
