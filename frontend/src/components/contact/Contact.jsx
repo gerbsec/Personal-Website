@@ -11,24 +11,27 @@ export const Contact = () => {
 
             <div className="container contact__container">
                 <div className="contact__options">
+                    <a href="mailto:albabawaseem61@gmail.com" target="_blank">
                     <article className='contact__option'>
                         <MdOutlineEmail className='contact__option-icon'/>
                         <h4>Email</h4>
-                        <h5>dummyemail@gmail.com</h5> 
-                        <a href="mailto:dummyemail@gmail.com" target="_blank">Send a message!</a>
+                        <h5>albabawaseem61@gmail.com</h5> 
                     </article>
+                    </a>
+                    <a href="https://twitter.com/gerbsec" target="_blank">
                     <article className='contact__option'>
                         <FiTwitter className='contact__option-icon'/>
                         <h4>Twitter</h4>
                         <h5>gerbsec</h5> 
-                        <a href="https://twitter.com/gerbsec" target="_blank">Send a message!</a>
                     </article>
+                    </a>
+                    <a href="https://www.linkedin.com/in/waseem-albaba-oscp-6a361b1b9" target="_blank">
                     <article className='contact__option'>
                         <FiLinkedin className='contact__option-icon'/>
                         <h4>LinkedIn</h4>
                         <h5>Waseem Albaba</h5> 
-                        <a href="https://www.linkedin.com/in/waseem-albaba-oscp-6a361b1b9" target="_blank">Send a message!</a>
                     </article>
+                    </a>
                 </div>
             </div>
         </section>
