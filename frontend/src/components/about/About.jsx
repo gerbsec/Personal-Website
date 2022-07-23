@@ -45,7 +45,9 @@ export const About = () => {
                         </article>
                     </div>
                     <p>
-                        paragraph here
+                        Hello, my name is Waseem Albaba, and I go by the handle gerbsec. I am a highly motivated security engineer with extensive knowledge
+                        of penetration testing methodologies and the MITRE att&ck framework.
+                        I love CTFs so much that I am president of my university team, <a href="https://www.linkedin.com/company/wcscusf">WCSC</a> @ USF. Please have a look at my work!
                     </p>
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
                 </div>

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = 'http://127.0.0.1:8000'
+const base_url = 'https://gerbsec.com:8000'
 
 async function get_recent(limit) {
     return (await axios.get(`${base_url}/writeups/${limit}`)).data;

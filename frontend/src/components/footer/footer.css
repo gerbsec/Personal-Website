@@ -4,6 +4,8 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     margin-top: 7rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 
 footer a {
