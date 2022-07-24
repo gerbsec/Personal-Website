@@ -1,7 +1,7 @@
 pre {
     line-height: 125%;
     display:inline-block;
-    width: 50%;
+    width: 500px;
     overflow-x: scroll;
 }
 
@@ -483,14 +483,24 @@ span.linenos.special {
 
 
 @media screen and (max-width: 1024px) {
-    .writeup_container {
+    .writeup__container {
         grid-template-columns: 1fr;
         gap: 1 rem;
+    }
+    .writeup__card {
+        padding: 0rem;
+        padding-left:2rem;
+    }
+    pre {
+        width: 350px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .writeup_container {
         width: var(--container-width-sm);
+    }
+    pre {
+        width: 350px;
     }
 }
